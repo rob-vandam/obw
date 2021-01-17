@@ -5,12 +5,13 @@ from django.contrib import admin
 from wagtail.admin import urls as wagtailadmin_urls
 from wagtail.core import urls as wagtail_urls
 from wagtail.documents import urls as wagtaildocs_urls
-
+from ledenlijst.views import edit_profile_page
 from search import views as search_views
 
 urlpatterns = [
+    path('edit-profiel/', edit_profile_page),
     path('django-admin/', admin.site.urls),
-
+#    path('accounts/login/', admin.site.urls),
     path('admin/', include(wagtailadmin_urls)),
     path('documents/', include(wagtaildocs_urls)),
 
