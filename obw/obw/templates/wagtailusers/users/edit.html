@@ -1,0 +1,15 @@
+{% extends "wagtailusers/users/edit.html" %}
+
+{% block extra_fields %}
+    {% include "wagtailadmin/shared/field_as_li.html" with field=form.bedrijfsnaam %}
+    {% include "wagtailadmin/shared/field_as_li.html" with field=form.omschrijving %}
+    {% include "wagtailadmin/shared/field_as_li.html" with field=form.contactpersoon %}
+    {% include "wagtailadmin/shared/field_as_li.html" with field=form.straatnaam %}
+    {% include "wagtailadmin/shared/field_as_li.html" with field=form.postcode %}
+    {% include "wagtailadmin/shared/field_as_li.html" with field=form.plaats %}
+    {% include "wagtailadmin/shared/field_as_li.html" with field=form.telefoonnummer %}
+    {% include "wagtailadmin/shared/field_as_li.html" with field=form.website %}
+    {% include "wagtailadmin/shared/field_as_li.html" with field=form.logo %}
+    {% include "wagtailadmin/shared/field_as_li.html" with field=form.foto %}
+
+{% endblock extra_fields %}
