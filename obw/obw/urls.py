@@ -7,8 +7,10 @@ from wagtail.core import urls as wagtail_urls
 from wagtail.documents import urls as wagtaildocs_urls
 
 from search import views as search_views
+from ledenlijst.views import edit_profile_page
 
 urlpatterns = [
+    path('edit-profiel/', edit_profile_page),
     path('django-admin/', admin.site.urls),
 
     path('admin/', include(wagtailadmin_urls)),
